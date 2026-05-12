@@ -143,8 +143,8 @@ def gen_nmer(smile,outname,n,natoms=None):
       
     poly.RemoveAllConformers()
     poly.AddConformer(conf, assignId=True)
-    # 4. Optimize geometry
-    AllChem.UFFOptimizeMolecule(poly)
+    # 4. Optimize geometry # Don't optimize it might mess up the molecule structure. Optimize using MD package.
+    #  AllChem.UFFOptimizeMolecule(poly)
 
     print('outname',outname)
     # 5. Save 3D structure
